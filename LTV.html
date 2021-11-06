@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="l-box">
+        <input type="text" placeholder="enter video link" name="lnk" id="lnk">
+        <input type="button" id="btn" value="submit" onclick="coderun();">
+    </div>
+    <video id="vdo" src="#" autobuffer controls height="500" width="1000"></video>
+</body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        background-color: rgb(17, 0, 37);
+        height: 100%;
+        width: 100%;
+    }
+    
+    .l-box {
+        height: 50px;
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: right;
+        padding-right: 10%;
+        padding-top: 10px;
+    }
+    
+    .l-box #lnk {
+        height: 30px;
+        width: 400px;
+        border-radius: 15px;
+        border: solid 3px #ec0671;
+        background-color: rgb(37, 15, 54);
+        color: #ec0671;
+        font-size: 15pt;
+        padding-left: 10px;
+    }
+    
+    .l-box #btn {
+        height: 30px;
+        width: 100px;
+        color: white;
+        background-color: rgb(161, 5, 140);
+        border-radius: 15px;
+        font-size: 13pt;
+        border: none;
+        margin-left: 20px;
+    }
+    
+    video {
+        height: auto;
+        width: 80%;
+        margin: 20px 10% 0 10%;
+        border-radius: 20px;
+        border: solid 4px #ec0671;
+    }
+</style>
+<script>
+    function coderun() {
+        var dta = document.getElementById('lnk').value
+        vdo.src = dta;
+    }
+</script>
+
+</html>
