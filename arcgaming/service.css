@@ -444,6 +444,10 @@ body {
     z-index: 1;
 }
 
+.item1{
+    background:#2df;
+}
+
 .idisplay {
     position: absolute;
     height: 100%;
