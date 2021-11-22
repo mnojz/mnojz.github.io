@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Yk {
+    max-width: 385px;
+    margin: 103px auto 74px;
+}
+
+.Yk,
+.Zk {
+    position: relative;
+}
+
+.Zk {
+    width: 385px;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+    left: -10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+}
+
+.Zk h2 {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -1.8px;
+    line-height: 46px;
+    text-shadow: 0 2px 4px rgba(71, 97, 206, 0.36);
+    position: relative;
+    top: 4px;
+}
+
+.Zk p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: -0.9px;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(71, 97, 206, 0.357272);
+}
+
+.Zk img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 0 8px;
+}
+
+.al,
+.bl,
+.dl {
+    position: absolute;
+}
+
+.dl {
+    height: 104px;
+    width: 104px;
+    z-index: 2;
+    top: -32px;
+    left: -21px;
+}
+
+.bl {
+    z-index: -1;
+    right: -30px;
+}
+
+.bl {
+    height: 139px;
+    width: 139px;
+    top: -110px;
+}
+
+.al {
+    height: 104px;
+    width: 104px;
+    bottom: -96px;
+    left: -24px;
+}
+
+.fl,
+.hl,
+.kl,
+.ll {
+    border: 1px solid hsla(0, 0%, 100%, 0.18);
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+    border-radius: 10px;
+    background: -webkit-radial-gradient( circle, hsla(0, 0%, 100%, 0.27) 0, hsla(0, 0%, 100%, 0.05) 100%);
+    background: radial-gradient( circle, hsla(0, 0%, 100%, 0.27) 0, hsla(0, 0%, 100%, 0.05) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: -1;
+}
+
+.ll {
+    top: 98px;
+    left: -222px;
+    width: 75px;
+    height: 75px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+}
+
+.kl,
+.ll {
+    font-size: 32px;
+}
+
+.kl {
+    top: 120px;
+    left: -70px;
+    width: 65px;
+    height: 65px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+}
+
+.hl {
+    top: 170px;
+    right: -176px;
+    width: 65px;
+    height: 65px;
+    font-size: 32px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+}
+
+.fl {
+    width: 110px;
+    height: 110px;
+    top: 60px;
+    z-index: 2;
+    flex-direction: column;
+    right: -72px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+}
+
+.fl .nl {
+    width: 46px;
+    height: 46px;
+    background: #80afe7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    border-radius: 50%;
+    color: #466394;
+}
+
+.fl .nl:hover {
+    font-size: 35px;
+    color: #374e75;
+}
+
+.fl span {
+    font-size: 11px;
+    line-height: 14px;
+    letter-spacing: -0.55px;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(71, 97, 206, 0.357272);
+    position: relative;
+    top: 13px;
+}
+
+@media (max-width: 550px) {
+    .Yk {
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+    }
+}
+
+@media (max-width: 360px) {
+    .Yk {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        margin: 0 auto 30px;
+        -webkit-transform-origin: 41%;
+        transform-origin: 41%;
+    }
+    .fl {
+        right: -100px;
+    }
+}
+
+.vb {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-image: -webkit-gradient( linear, left top, left bottom, color-stop(5%, #2f6ed3), color-stop(20%, #5095e4), color-stop(60%, #5095e4), color-stop(95%, #2f6ed3));
+    background-image: -webkit-linear-gradient( top, #2f6ed3 5%, #5095e4 20%, #5095e4 60%, #2f6ed3 95%);
+    background-image: linear-gradient( 180deg, #2f6ed3 5%, #5095e4 20%, #5095e4 60%, #2f6ed3 95%);
+    z-index: -3;
+}
