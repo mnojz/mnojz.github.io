@@ -58,6 +58,12 @@
     height: 120px;
     border-radius: 50%;
     margin: 0 0 8px;
+    border: solid 3px #fff;
+    transition: ease 0.2s;
+}
+
+.Zk img:hover {
+    transform: scale(1.1);
 }
 
 .al,
