@@ -1,0 +1,207 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <title>my bio</title>
+</head>
+<body>
+    <nav class="nav">
+        <div class="logo" onclick="window.open('https://www.youtube.com/channel/UCgPnYaqjILRiQf8myp0QX_w','_blank')">
+            <img src="p1.png" alt="logo">
+        </div>
+        <div class="uname">Bio-Data</div>
+    </nav>
+    <!-- nav end -->
+    <div class="container">
+        <div class="profile-pic">
+            <img src="pic.jpg" alt="profile picture" onclick="window.open('https://www.facebook.com/manoj.joshi.MJ/','_blank')">
+            <i class="fa fa-arrows-alt"></i>
+        </div>
+        <table class="pd" cellpadding="0">
+            <thead>
+                <tr>
+                    <th>personal detail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Name:</td>
+                    <td>Manoj joshi</td>
+                </tr>
+                <tr>
+                    <td>Class:</td>
+                    <td>XI</td>
+                </tr>
+                <tr>
+                    <td>DOB:</td>
+                    <td>2003 Oct 22</td>
+                </tr>
+                <tr>
+                    <td>blood group:</td>
+                    <td>B +'ve'</td>
+                </tr>
+                <tr>
+                    <td>E-mail:</td>
+                    <td><u>hello_manoj@outlook.com</u></td>
+                </tr>                
+               
+            </tbody>
+        </table>
+    </div>
+    <div class="foot">Draggable box demo</div>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #142044;
+}
+
+.nav{
+    position: fixed;
+    top: 20px;
+    width: 80%;
+    margin: 0 10%;
+    height: 80px;
+    border-radius: 50px;
+    background: #1c2a53;
+    box-shadow: 5px 5px 15px #00000044;
+    /* overflow: hidden; */
+}
+.logo{
+    position: relative;
+    height: 80px;
+    width: 80px;
+    padding: 5px;
+}
+.logo:hover{
+    cursor: pointer;    
+}
+.logo img{
+    height: 70px;
+    width: 70px;
+    position: absolute;
+}
+.uname{
+    position: absolute;
+    height: 80px;
+    width: 500px;
+    top: 0;
+    left: 80px;
+    padding: 5px;
+    color: #3a5299;
+    font-size: 40pt;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container{
+    position: absolute;
+    top: 100px;
+    width: 80%;
+    margin: 0 10%;
+    height: auto;
+}
+.profile-pic{
+    position: absolute;
+    right: 0;
+    top: 50px;
+    height: 300px;
+    width: 300px;
+    background-color: #1c2a53;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 25px;
+    box-shadow: 5px 5px 10px #00000055;
+    z-index: 10;
+}
+.profile-pic img{
+    position: absolute;
+    height: 260px;
+    width: 260px;
+    margin: 20px;
+    border-radius: 50%;
+}
+.profile-pic i{
+    position: absolute;
+    color: #354880;
+    right: 15px;
+    top: 15px;
+    font-size: 30pt;
+}
+.profile-pic i:hover{
+    cursor: move;
+}
+.pd{
+    position: absolute;
+    background-color: #1c2a53;
+    height: 300px;
+    width: 600px;
+    left: 10%;
+    top: 50px;
+    border-radius: 30px;
+    color: aqua;
+    font-size: 20pt;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow: hidden;
+    border: 2px solid #354880;
+}
+thead{
+    box-shadow: 5px 5px 15px #00000022;   
+    font-weight: bold; 
+    height: 50px;
+}
+tbody{
+    position: absolute;
+    margin-left: 10px;
+    border: #354880;
+    height: 100%;
+    width: 100%;    
+}
+tbody tr{
+    height: 40px;
+}
+tbody tr td{
+    width: 200px;
+}
+.foot{
+    position: fixed;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    color: rgb(52, 114, 185);
+    font-size: 20pt;
+    text-align: center;
+    font-family:agency FB;
+    box-shadow: 0 0 15px #00000022;
+}
+</style>
+<script>
+    const wrapper = document.querySelector(".profile-pic"),
+    header = wrapper;
+
+    function onDrag({movementX, movementY}){
+      let getStyle = window.getComputedStyle(wrapper);
+      let leftVal = parseInt(getStyle.left);
+      let topVal = parseInt(getStyle.top);
+      wrapper.style.left = `${leftVal + movementX}px`;
+      wrapper.style.top = `${topVal + movementY}px`;
+    }
+
+    header.addEventListener("mousedown", ()=>{
+      header.classList.add("active");
+      header.addEventListener("mousemove", onDrag);
+    });
+
+    document.addEventListener("mouseup", ()=>{
+      header.classList.remove("active");
+      header.removeEventListener("mousemove", onDrag);
+    });
+</script>
+</body>
+</html>
