@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="style.css"> -->
     <script src="https://kit.fontawesome.com/906c803acd.js" crossorigin="anonymous"></script>
-    <title>canvas</title>
+    <title>board</title>
 </head>
 <body>
     <canvas id="canvas"></canvas>   
@@ -169,8 +169,10 @@ window.addEventListener("load", () => {
         }
 
     canvas.addEventListener("mousedown", startPosition);
+    canvas.addEventListener("touchstart", startPosition);
     canvas.addEventListener("mouseup", endPosition);
     canvas.addEventListener("mousemove", draw);
+    canvas.addEventListener("touchmove", draw);
 });
 
 function clrscr(){
