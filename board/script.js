@@ -2,9 +2,18 @@
 
         var color = 'rgb(255, 0, 76)';
         var bColor = '#191b41';
-        var strokeSize = 5
-        const box = document.getElementById("controls");
-        
+        var strokeSize = 5        
+        const box = document.getElementById("controls");        
+       
+
+        function fetch(element){
+          color = element.value;
+          console.log(element.value); 
+          strokeSize = 5;  
+          document.querySelector("#canvas").style.cursor = 'default';
+        }
+
+
         function onDrag({movementX, movementY}){
             console.log(movementX, movementY);
             let getstyle = window.getComputedStyle(box);
@@ -27,13 +36,12 @@
             console.log(element.style.background); 
             strokeSize = 5;  
             document.querySelector("#canvas").style.cursor = 'default';
-
         }
 
         function erase(){
             color = bColor;
             strokeSize = 25;   
-            document.querySelector("#canvas").style.cursor = 'url("eraser.png") 12 12,auto';
+            document.querySelector("#canvas").style.cursor = 'url("https://hello-manoj.github.io/board/eraser.png") 12 12,auto';
         }       
         
 
