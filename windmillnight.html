@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scenery</title>
+</head>
+<body>
+    <div class="container">
+        <div class="land"></div>
+        <div class="mts m1"></div>
+        <div class="mts m2"></div>
+        <div class="mts m3"></div>
+        <div class="moon">
+            <div class="m_core">
+                <div class="m_core2"></div>
+            </div>
+        </div>
+        <div class="stars s1"></div>
+        <div class="stars s2"></div>
+        <div class="stars s3"></div>
+        <div class="stars s4"></div>
+        <div class="stars s5"></div>
+        <div class="windmill">
+            <div class="fan">
+                <span></span>
+                <span></span>                
+            </div>
+        </div>
+        <div class="spikes">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</body>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: #12153f;        
+    }
+    .container{                                                     
+        position: absolute;
+        height: 300px;
+        width: 300px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 50%;
+        background: #162452;
+        overflow: hidden;
+        box-shadow: 10px 30px 80px rgba(0, 0, 0, 0.336);
+    }
+    .land{
+        position: absolute;
+        height: 100px;
+        width: 300px;
+        bottom: -20px;
+        left: -20px;
+        background: #0d1738;
+        transform: rotate(5deg);
+        z-index: 5;
+    }
+    .mts{
+        height: 100px;
+        width: 100px;
+        background: #1d306e;
+        transform: rotate(45deg);
+        z-index: 2;
+    }
+    .m1{
+        position: absolute;
+        bottom: 60px;
+        left: 0px;
+    }
+    .m2{
+        position: absolute;
+        bottom: 40px;
+        left: 70px;
+    }
+    .m3{
+        position: absolute;
+        bottom: 30px;
+        right: 0px;
+    }
+    .moon{
+        position: absolute;
+        top: 40px;
+        left: 60px;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.103);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 150px rgba(255, 255, 255, 0.582);
+    }
+    .m_core{
+        height: 47px;
+        width: 47px;
+        background: rgba(255, 255, 255, 0.199);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .m_core2{
+        height: 25px;
+        width: 25px;
+        background: rgb(255, 255, 255);
+        border-radius: 50%;        
+    }
+    .stars{
+        position: absolute;
+        height: 2px;
+        width: 2px;
+        border-radius: 50%;
+        background-color: #fff;
+        box-shadow: 0 0 50px #fff;
+    }
+    .s1{
+        right: 70px;
+        top: 50px;
+    }
+    .s2{
+        right: 50px;
+        top: 125px;
+    }
+    .s3{
+        right: 120px;
+        top: 50px;
+    }
+    .s4{
+        right: 240px;
+        top: 50px;
+        height: 3px;
+        width: 3px;
+    }
+    .s5{
+        right: 120px;
+        top: 150px;
+        height: 1px;
+        width: 1px;
+    }
+    .windmill{
+        position: absolute;
+        height: 70px;
+        width: 30px;
+        background: #0d1738;
+        bottom: 50px;
+        right: 70px;
+        z-index: 5;
+    }
+    .windmill::before{
+        content: '';
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        top: -15px;
+        left: 0px;
+        border-radius: 50%;
+        background-color: #0d1738;
+    }
+    .windmill::after{
+        content: '';
+        height: 20px;
+        width: 10px;
+        position: absolute;
+        bottom: 30px;
+        left: 10px;        
+        background-color: #424d72;
+        box-shadow:  0 0 40px #2885ff;
+        z-index: 1;
+    }
+    .fan{
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        top: -50px;
+        right: -36px; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: anim 7s linear infinite;
+        z-index: 5;
+    }    
+    .fan span:nth-child(1)::before{
+        content: '';
+        position: absolute;
+        top: 0px;
+        right: 40px;
+        height: 40px;
+        width: 10px;
+        background: #0d1738;
+    }
+    .fan span:nth-child(1)::after{
+        content: '';
+        position: absolute;
+        bottom: 0px;
+        left: 40px;
+        height: 40px;
+        width: 10px;
+        background: #0d1738;
+        z-index: 4;
+    }    
+    .fan span:nth-child(2)::before{
+        content: '';
+        position: absolute;
+        left: 0px;
+        top: 40px;
+        width: 40px;
+        height: 10px;
+        background: #0d1738;
+    }
+    .fan span:nth-child(2)::after{
+        content: '';
+        position: absolute;
+        right: 0px;
+        bottom: 40px;
+        width: 40px;
+        height: 10px;
+        background: #0d1738;
+        z-index: 4;
+    }
+    .spikes{
+        position: absolute;
+        bottom: 80px;
+        left: 50px;
+        height: 50px;
+        width: 30px;
+        z-index: 5;
+    }
+    .spikes span{
+        height: 50px;
+        width: 10px;
+        border: solid 10px transparent;
+        border-bottom:solid 50px #0d1738;
+    }
+    .spikes span:nth-child(1){
+        position: absolute;
+        bottom: 0;
+        left: 0px;
+    }
+    .spikes span:nth-child(2){
+        position: absolute;
+        bottom: -15px;
+        left: 10px;
+    }
+
+    @keyframes anim{
+        0%{transform: rotate(0deg);}
+        100%{transform: rotate(365deg);}
+    }
+</style>
+</html>
