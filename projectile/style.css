@@ -1,0 +1,146 @@
+:root{
+    --bg: #1c1d34;
+    --bg2: #17182b;
+    --sc: #28293e;
+    --pr: #ff0037;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg);
+    overflow: hidden;
+}
+.container{
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.controls{
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 200px;
+    background: var(--bg2);
+    border: solid 3px #7a7da1 ;
+    border-radius: 20px;
+    color: white;
+    padding: 10px;
+    font-size: 15pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    transition: all .5s linear;
+    z-index: 2;
+}
+.controls .heading{
+    position: absolute;
+    height: 35px;
+    width: 220px;
+    left: -10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid 3px #7a7da1;
+    border-top: none;
+}
+.controls table{
+    margin-top: 40px;
+    height: 200px;    
+}
+.deploy{
+    position: absolute;
+    top: 270px;
+    left: 50%;
+    height: 30px;
+    width: 80px;
+    font-size: 15pt;
+    text-align: center;
+    color: #ffffffe8;
+    border: none;
+    border-radius: 10px;
+    background: #ff004cbb;
+    transition: all .2s linear;
+    cursor: pointer;
+}
+.deploy:hover{
+    background-color: #ff004c;
+    transform: scale(1.02);
+    color: #fff;
+}
+.foot{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 30pt;
+    background:#686a8544;
+    border-radius: 50%;
+    transition: all .1s linear;
+    z-index: 10;
+
+}
+.after{
+    position: absolute;
+    height: 0px;
+    width: 15px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: solid 2px #7a7da1;
+    transition: all .2s linear;
+}
+.foot:hover{
+    background-color: #ff397b4f;
+    transform: scale(1.1);
+}
+.foot:hover .after{
+    border: solid 2px #c2c6e9;
+}
+.text{
+    background-color: #28293e;
+    border: solid 2px #7a7da1;
+    padding: 10px;
+    color: #fff;
+    height: 30px;
+    width: 170px;
+    border-radius: 10px;
+}
+.text::placeholder{
+    color: #7a7da1;
+    font-size: 11pt;
+}
+.projectile{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background: #ff004c;
+    transform: translate(-50%,-50%);
+    left: 40px;
+    bottom: -10px;
+    z-index: 1;
+    border-radius: 50%;
+}
+.reasult{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 230px;
+    color: #ff004c;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.reasult table tr td p{
+    color: #fff;
+    padding-left: 20px;
+}
+
