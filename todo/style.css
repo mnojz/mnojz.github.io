@@ -6,6 +6,7 @@
 body{   
     background-image: url(https://www.teahub.io/photos/full/73-732125_abstract-gradient..jpg);
     background-size: cover;
+    overflow:hidden;
 }
 .wrapper{
     position: absolute;
