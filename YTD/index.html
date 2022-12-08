@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <title>YT downloader</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="pp.jpg" alt="profile">
+            <button onclick="window.open('https://discord.gg/zUHYpHrZ','_blank');">discord</button>
+        </div>
+        <div class="from">
+            <h1>Youtube Downloader</h1>
+            <input type="text" class="link" placeholder="Enter Video Link" spellcheck="false" data-ms-editor="true" /><br>
+            <select class="format" required="">
+                <option value="mp3">Mp3</option>
+                <option value="m4a">144p</option>
+                <option value="360">360p</option>
+                <option value="480">480p</option>
+                <option value="720">720p</option>
+                <option value="1080">1080p</option>
+                <option value="4k">4k</option>
+                <option value="8k">8k</option>
+            </select>
+            <button class="btn" onclick="download()">Start</button>
+            <hr>
+            <div class="result1"><span> --- preview here --- </span></div>
+            <div class="result2"><span>DOWNLOAD</span></div>
+        </div>
+    </div>    
+    <script src="main.js"></script>
+</body>
+
+</html>
