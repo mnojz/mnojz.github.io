@@ -17,23 +17,34 @@ body{
 }
 .container{
   position: absolute;
-  height: calc(100% - 100px);
-  width: calc(100% - 160px);
-  background: #201747c0;
-  backdrop-filter: blur(25px);
+  height: 500px;
+  width: 970px;
+  background: #20174775;
+  backdrop-filter: blur(50px);
   border-radius: 10px;
-  border: solid 2px #8077ff;
+  box-sizing: content-box;
+}
+.container::before{
+  content: '';
+  position: absolute;
+  height: 500px;
+  width: 970px;
+  border:solid 10px #ffffff3a;
+  border-radius: 15px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .left{
   position: absolute;
   left: 0;
   height: 100%;
-  width: 200px;
-  background-color: #17114b;
+  width: 150px;
+  background-color: #1a115a93;
   box-shadow: 0 10px 50px rgba(0, 2, 26, 0.644);
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  border-right: solid 1px #8077ff;
+  /* border-right: solid 1px #8077ff; */
 
 }
 .from{
@@ -41,38 +52,47 @@ body{
   height: 100%;
   width: auto;
   right: 0px;
-  left: 200px;
-  padding-left: 50px;
+  left: 150px;
+  padding-left: 30px;
 }
-h1{
+.title{
   position: relative;
   width: 100%;
-  top: 30px;
-  left: -100px;
-  text-align: center;
-  color: #8077ff;
-  font-size: 30px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.title img{
+  height: 70px;
+  width: 70px;
+  margin-left: 170px;
+  opacity: .7;
+}
+.title h1{
+  color: #cbbdffaf;
 }
 .link,.format{
     position: relative;   
     height: 40px;   
     left: 0;
     background: #08005033;
-    border: solid 2px rgba(255, 255, 255, 0.26);
-    border-radius: 10px;
+    border: solid 2px rgba(255, 255, 255, 0.137);
+    border-radius: 20px;
     padding:0 10px;
     color: #ffffff;
     font-size: 20px;
 }
 .link{
   top: 100px;
-  width: 400px;
+  width: 300px;
+  padding-top: 4px;
+  padding-left: 20px;
 }
 .link::placeholder{
   color: #a8a2ff;
 }
 select{
-  top: 120px;
+  top: 110px;
   outline: 0;
 }
 select option{
@@ -86,12 +106,12 @@ select option:hover{
 .btn{
   position: absolute;
   bottom: 50px;
-  left: 50px;
-  width: 200px;
+  left: 30px;
+  width: 150px;
   height: 40px;
   border: none;
   background-color: #8077ff8c;
-  border-radius: 5px;
+  border-radius: 15px;
   color: rgb(6, 0, 43);
   cursor: pointer;
   font-size: 25px;
@@ -104,15 +124,24 @@ select option:hover{
 }
 .result1{
   position: absolute;
-  right: 50px;
+  right: 30px;
   top: 50%;
   transform: translate(0,-50%);
   height: 250px;
-  background-color: #17114b;
-  border: solid 2px #8077ff;
+  background-color: #17114b52;
+  border: solid 1px #8077ff;
   width: 400px;
   border-radius: 10px;
   overflow: hidden;
+}
+.result1::before{
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  height: 248px;
+  width: 398px;
+  border-radius: 10px;
+  border: solid 5px #8077ff;
 }
 .result1 span{
   position: absolute;
@@ -132,7 +161,6 @@ select option:hover{
   width: 150px;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  overflow: hidden;
   background-color: #8077ff;
 }
 .result2 span{
@@ -149,6 +177,16 @@ select option:hover{
   -moz-user-select: none; 
   -ms-user-select: none; 
 }
+#rmsg{
+  position: absolute;
+  right: 150px;
+  width: 260px;
+  top: 10px;
+  color: #8077ff;
+  font-size: 25px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  visibility: hidden;
+}
 .result2 iframe{
   opacity: .001;
   z-index: 2;
@@ -160,9 +198,16 @@ select option:hover{
   transform: translate(-50%);
   height: 100px;
   width: 100px;
-  border-radius: 10px;
-  border: solid 3px #8077ff;
+  border-radius: 50%;
+  border: solid 4px #ffffff7a;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.288);
+  transition: all .3s linear;
+}
+.left img:hover{
+  top: -50px;
+  height: 110px;
+  width: 110px;
+  border: solid 5px #ff0080;
 }
 .left button{
   position: absolute;
@@ -171,21 +216,26 @@ select option:hover{
   height: 35px;
   width: 90%;
   transform: translate(-50%);
-  background-color: #8077ff;
+  background-color: #6156ffa4;
   font-size: 20px;
   border: none;
   border-radius:5px;
   color: #04002b;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   cursor: pointer;
+  transition: all .1s linear;
+}
+.left button:hover{
+  background-color: #8077ff;
 }
 hr{
   position: absolute;
-  height: 340px;
+  height: 320px;
   width: 3px;
   top: 50%;
   transform: translate(-50%,-50%);
-  background: #8077ff;
+  background: #ffffff41;
   border: none;
-  right: 500px;
+  right: 460px;
+  margin-top: 10px;
 }
