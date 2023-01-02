@@ -23,3 +23,8 @@ button {
     text-transform: uppercase;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;    
 }
+.progress-container {
+    background: #ccc;
+    position: absolute;
+    top: 46px;
+}
