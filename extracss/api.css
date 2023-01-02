@@ -1,0 +1,19 @@
+button {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.progress-button {
+  background-color: #ff0b55;
+}
+
+.buttonTitle {
+  display: none;
+}
+
+.progress-container {
+  background: #ccc;
+}
+
+.progress-bar {
+  background: #ff4b96;
+}
