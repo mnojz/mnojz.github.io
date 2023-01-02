@@ -17,3 +17,9 @@ button {
 .progress-bar {
   background: #ff4b96;
 }
+
+#percentageText {
+    font-size: 1.3em;   
+    text-transform: uppercase;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;    
+}
