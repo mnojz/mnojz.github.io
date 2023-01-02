@@ -10,24 +10,16 @@ button {
   display: none;
 }
 
-.progress-container {
-  background: #ccc;
-}
-
-.progress-bar {
-  background: #ff4b96;
-}
-
 #percentageText {
     font-size: 1.3em;   
     text-transform: uppercase;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;    
 }
 .progress-container {
-    background: #ccc;
+    background: transparent;
     position: absolute;
     top: 46px;
 }
 .progress-bar {
-    background: #ffc355;
+    background: #ffffff;
 }
