@@ -181,8 +181,13 @@ select option:hover{
   visibility: hidden;
 }
 .result2 iframe{
-  opacity: .001;
+  position: absolute;
   z-index: 2;
+  height:50px;
+  width: 150px;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 6px;
 }
 .left img{
   position: absolute;
