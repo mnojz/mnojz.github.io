@@ -1,39 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="shortcut icon" href="https://www.youtube.com/s/desktop/25bf5aae/img/favicon_144x144.png">
+  <head>
+    <link
+      rel="shortcut icon"
+      href="https://www.youtube.com/s/desktop/25bf5aae/img/favicon_144x144.png"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>YT downloader</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="left">
-            <img src="pp.jpg" alt="profile">
-            <button onclick="window.open('https://discord.gg/zUHYpHrZ','_blank');">discord</button>
+      <div class="left">
+        <img src="pp.png" alt="profile" />
+        <button onclick="window.open('https://discord.gg/Rg9ydW82fS','_blank');">
+          discord
+        </button>
+      </div>
+      <div class="from">
+        <div class="title">
+          <img src="youtube.png" alt="youtube" />
+          <h1>Downloader</h1>
         </div>
-        <div class="from">
-            <div class="title">
-                <img src="youtube.png" alt="youtube">
-                <h1>Downloader</h1>
-            </div>
-            <input type="text" class="link" placeholder="Enter Video Link" spellcheck="false" data-ms-editor="true" /><br>
-            <select class="format" required="">
-                <option value="mp3">Mp3</option>
-                <option value="m4a">144p</option>
-                <option value="360">360p</option>
-                <option value="480">480p</option>
-                <option value="720">720p</option>
-                <option value="1080">1080p</option>
-                <option value="4k">4k</option>
-                <option value="8k">8k</option>
-            </select>
-            <button class="btn" onclick="download()">Start</button>
-            <hr>
-            <div class="result1"><span> --- preview here --- </span></div>
-            <div class="result2"><span>DOWNLOAD</span><h3 id="rmsg">Click if not started👉</h3></div>
+        <input
+          type="text"
+          class="link"
+          placeholder="Enter Video Link"
+          spellcheck="false"
+          data-ms-editor="true"
+        /><br />
+        <select class="format" required="">
+          <option value="mp3">Mp3</option>
+          <option value="m4a">144p</option>
+          <option value="360">360p</option>
+          <option value="480">480p</option>
+          <option value="720">720p</option>
+          <option value="1080">1080p</option>
+          <option value="4k">4k</option>
+          <option value="8k">8k</option>
+        </select>
+        <button class="btn" onclick="download()">Start</button>
+        <hr />
+        <div class="result1"><span> --- preview here --- </span></div>
+        <div class="result2">
+          <span>DOWNLOAD</span>
+          <h3 id="rmsg">Click if not started👉</h3>
         </div>
-    </div>    
+      </div>
+    </div>
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>

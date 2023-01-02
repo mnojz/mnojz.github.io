@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 body{
   background-image: url(bg.jpg);
@@ -40,11 +41,10 @@ body{
   left: 0;
   height: 100%;
   width: 150px;
-  background-color: #1a115a93;
-  box-shadow: 0 10px 50px rgba(0, 2, 26, 0.644);
+  background-color: #0400ff0e;
+  box-shadow: 0 10px 150px rgba(0, 2, 26, 0.404);
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  /* border-right: solid 1px #8077ff; */
 
 }
 .from{
@@ -66,7 +66,6 @@ body{
   height: 70px;
   width: 70px;
   margin-left: 170px;
-  opacity: .7;
 }
 .title h1{
   color: #cbbdffaf;
@@ -81,6 +80,7 @@ body{
     padding:0 10px;
     color: #ffffff;
     font-size: 20px;
+
 }
 .link{
   top: 100px;
@@ -128,20 +128,17 @@ select option:hover{
   top: 50%;
   transform: translate(0,-50%);
   height: 250px;
-  background-color: #17114b52;
-  border: solid 1px #8077ff;
+  background-color: #17114b5e;
+  border: solid 7px #22223d04;
   width: 400px;
   border-radius: 10px;
   overflow: hidden;
 }
-.result1::before{
-  content: '';
+.result1 iframe{
   position: absolute;
-  box-sizing: border-box;
-  height: 248px;
-  width: 398px;
-  border-radius: 10px;
-  border: solid 5px #8077ff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .result1 span{
   position: absolute;
@@ -150,17 +147,17 @@ select option:hover{
   text-align: center;
   transform: translate(0, -50%);
   font-size: 30px;
-  color: #8077ff;
+  color: #8077ff49;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .result2{
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 0px;
+  right: 0px;
   height: 50px;
   width: 150px;
   border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 6px;
   background-color: #8077ff;
 }
 .result2 span{
@@ -171,11 +168,7 @@ select option:hover{
   font-size: 20px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   z-index: 0;
-  color: #04002b;
-  user-select: none; 
-  -webkit-user-select: none;        
-  -moz-user-select: none; 
-  -ms-user-select: none; 
+  color: #04002b;   
 }
 #rmsg{
   position: absolute;
@@ -199,15 +192,14 @@ select option:hover{
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  border: solid 4px #ffffff7a;
+  border: solid 4px #ffffff33;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.288);
-  transition: all .3s linear;
+  transition: all .1s linear;
 }
 .left img:hover{
-  top: -50px;
-  height: 110px;
-  width: 110px;
-  border: solid 5px #ff0080;
+  top: -35px;
+  height: 105px;
+  width: 105px;
 }
 .left button{
   position: absolute;
