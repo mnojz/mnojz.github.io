@@ -22,4 +22,7 @@ button {
 }
 .progress-bar {
     background: #ffffff;
+    height: 2px;
+    position: absolute;
+    bottom: 0px;
 }
