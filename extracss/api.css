@@ -28,3 +28,6 @@ button {
     position: absolute;
     top: 46px;
 }
+.progress-bar {
+    background: #ff003b;
+}
