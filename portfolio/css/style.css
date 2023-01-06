@@ -63,7 +63,7 @@ header {
 header.shadow {
   box-shadow: 0 0 4px rgb(14 55 54 / 15%);
 }
-.logo {
+.logo,.logo span {
   font-size: 1.61rem;
   font-weight: 600;
   color: var(--text-color);
