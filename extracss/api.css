@@ -3,7 +3,7 @@ button {
 }
 
 .progress-button {
-  background-color: #ff0b55;
+  background-color: #3d2c93;
 }
 
 .buttonTitle {
@@ -11,18 +11,18 @@ button {
 }
 
 #percentageText {
-    font-size: 1.3em;   
-    text-transform: uppercase;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;    
+  font-size: 1.3em;
+  text-transform: uppercase;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .progress-container {
-    background: transparent;
-    position: absolute;
-    top: 46px;
+  background: transparent;
+  position: absolute;
+  top: 46px;
 }
 .progress-bar {
-    background: #ffffff;
-    height: 2px;
-    position: absolute;
-    bottom: 0px;
+  background: #ffffff;
+  height: 2px;
+  position: absolute;
+  bottom: 0px;
 }
