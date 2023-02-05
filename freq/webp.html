@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sound-gen</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="display">
+        <span>0 Hz</span>
+      </div>
+      <div class="knob">
+        <!-- HTML code for the slider -->
+        <input
+          type="range"
+          min="0"
+          max="2000"
+          value="600"
+          class="slider"
+          id="mySlider"
+        />
+      </div>
+    </div>
+    <button>click</button>
+  </body>
+</html>
+<script>
+  const slider = document.getElementById("mySlider");
+  const display = document.querySelector("span");
+  const button = document.querySelector("button");
+  const audioContext = new AudioContext();
+  const oscillator = new OscillatorNode(audioContext);
+
+  oscillator.connect(audioContext.destination);
+  oscillator.start();
+
+  slider.oninput = function () {
+    oscillator.frequency.setValueAtTime(
+      oscillator.frequency.value,
+      audioContext.currentTime
+    );
+    oscillator.frequency.linearRampToValueAtTime(
+      this.value,
+      audioContext.currentTime + 0.1
+    );
+    display.innerHTML = parseInt(slider.value) + " Hz";
+  };
+
+  button.addEventListener("click", function () {
+    if (audioContext.state == "suspended") {
+      audioContext.resume();
+    }
+    if (oscillator.playbackState == "stopped") {
+      oscillator.frequency.value = 440; //Set the frequency to 440 Hz
+      oscillator.start();
+      button.textContent = "Pause";
+    } else {
+      oscillator.stop();
+      oscillator.frequency.value = 0;
+      button.textContent = "Play";
+    }
+  });
+</script>
+
+<style>
+  body {
+    background-color: rgb(9, 2, 37);
+    color: rgb(255, 0, 85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    width: 900px;
+    border: solid 5px #ffffff66;
+    border-radius: 30px;
+    background: #ffffff18;
+  }
+
+  .slider {
+    height: 10px;
+    width: 800px;
+  }
+
+  span {
+    font-size: 30px;
+  }
+</style>

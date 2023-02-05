@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pong</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="board">
+        <div class="line"></div>
+        <div class="circle"></div>
+        <div id="ball" class="ball"></div>
+        <div id="bat" class="bat"></div>
+      </div>
+    </div>
+    <div class="message">
+      <h2 id="msg"></h2>
+    </div>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #181030;
+      }
+      .container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: #211741;
+        height: 500px;
+        width: 900px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .board {
+        position: relative;
+        height: 400px;
+        width: 700px;
+        margin-top: 20px;
+        border: solid 10px #664fb1;
+        border-right: solid 4px #b33d5a;
+        z-index: 10;
+      }
+      .ball {
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        top: calc(50% - 10px);
+        left: calc(50% - 10px);
+        border-radius: 50%;
+        background-color: #664fb1;
+      }
+      .bat {
+        position: absolute;
+        height: 140px;
+        width: 10px;
+        right: 10px;
+        top: calc(50% - 70px);
+        background-color: #664fb1;
+      }
+      .message {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: #664fb10c;
+        backdrop-filter: blur(25px);
+        visibility: hidden;
+      }
+      .message h2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 160px;
+        width: 600px;
+        border: solid 10px #664fb1;
+        border-radius: 20px;
+        font-family: agency fb;
+        color: #664fb1;
+        font-size: 100px;
+        padding-top: 10px;
+        padding-left: 20px;
+      }
+      .line {
+        position: absolute;
+        left: calc(50% - 2px);
+        height: 100%;
+        width: 4px;
+        background-color: #664fb1;
+        z-index: 0;
+      }
+      .circle {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        left: calc(50% - 100px);
+        top: calc(50% - 100px);
+        border: solid 4px #664fb1;
+        border-radius: 50%;
+        z-index: 0;
+      }
+    </style>
+    <script>
+      // calling DOM elements
+      const messageBox = document.querySelector(".message");
+      const message = document.getElementById("msg");
+      const board = document.querySelector(".board");
+      const ball = document.getElementById("ball");
+      const bat = document.getElementById("bat");
+
+      //declaring variables
+      var xspeed = 10;
+      var yspeed = 10;
+      var score = 0;
+
+      var firstClick = true;
+
+      //animation
+      function animation() {
+        requestAnimationFrame(animation);
+        if (ball.offsetTop <= 0 || ball.offsetTop >= 360) {
+          yspeed = -yspeed;
+        }
+        if (ball.offsetLeft <= 0) {
+          xspeed = -xspeed;
+        }
+        // hitting bat start =====================
+        if (
+          ball.offsetLeft >= 646 &&
+          ball.offsetLeft <= 666 &&
+          ball.offsetTop >= bat.offsetTop &&
+          ball.offsetTop <= bat.offsetTop + 140
+        ) {
+          xspeed = -xspeed;
+          score++;
+        }
+        //hitting bat end ========================
+
+        //condition for gameover
+        if (ball.offsetLeft >= 666) {
+          gameOver();
+        }
+
+        ball.style.top = ball.offsetTop + yspeed + "px";
+        ball.style.left = ball.offsetLeft + xspeed + "px";
+      }
+
+      //click to start game
+      board.addEventListener("mousedown", () => {
+        if (firstClick) {
+          animation();
+          firstClick = false;
+        }
+      });
+
+      //gameover
+      function gameOver() {
+        document.body.style.cursor = "default"; //default cursor.
+        xspeed = 0;
+        yspeed = 0;
+        messageBox.style.visibility = "visible";
+        message.innerText = "SCORE: " + score;
+      }
+
+      //bat control
+      board.addEventListener("mousemove", (e) => {
+        document.body.style.cursor = "move"; //changing cursor
+        if (e.offsetY >= 70 && e.offsetY <= 320) {
+          bat.style.top = e.offsetY - 70 + "px";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frequency</title>
+    <script src="https://cdn.jsdelivr.net/gh/foobar404/wave.js/dist/bundle.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="navbar">
+          <div class="logo">
+            <img
+              src="https://www.pngall.com/wp-content/uploads/9/Frequency.png"
+              alt="logo"
+            />
+          </div>
+        </div>
+        <button class="power" id="pwr">
+          <div class="ind"></div>
+          POWER
+        </button>
+        <span class="display">400Hz</span>
+
+        <div class="graph" id="graph">
+          <span>Graph under construction</span>
+        </div>
+
+        <input type="range" min="0" max="100" value="10" id="gain" />
+        <input type="range" min="0" max="16000" value="400" id="freq" />
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="canvas.js"></script>
+  </body>
+</html>
