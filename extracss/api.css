@@ -3,7 +3,7 @@ button {
 }
 
 .progress-button {
-  background-color: #3d2c93;
+  background: linear-gradient(to right, #f55265, #f77e61);
 }
 
 .buttonTitle {
