@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <title>YouTube video downloader</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="nav-btn">
+          <button><i class="fa fa-home" aria-hidden="true"></i></button>
+          <button onclick="window.open('about.html','_self')"><i class="fa fa-user-circle-o" aria-hidden="true"></i></button>
+        </div>
+      </nav>
+      <div class="home">
+        <h1>YT Downloader</h1>
+        <div class="input">
+          <input type="text" class="in link" placeholder="Enter Video Link" />
+          <select class="in format" required="">
+            <option value="mp3">Mp3</option>
+            <option value="m4a">144p</option>
+            <option value="360">360p</option>
+            <option value="480">480p</option>
+            <option value="720">720p</option>
+            <option value="1080">1080p</option>
+            <option value="4k">4k</option>
+            <option value="8k">8k</option>
+          </select>
+          <button class="in btn" onclick="download()">Start</button>
+        </div>
+        <div class="result1">
+          <span> --- preview here --- </span>
+        </div>
+        <div class="result2">
+          <span>DOWNLOAD</span>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

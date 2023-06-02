@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+button {
+  cursor: pointer;
+}
+.container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #242936;
+  display: inline-flex;
+}
+
+nav {
+  height: 100%;
+  width: 50px;
+  left: 0;
+  background: #1f2330;
+}
+
+.nav-btn {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 5px;
+  top: 50%;
+  width: 40px;
+  height: 90px;
+  transform: translate(0, -50%);
+}
+.nav-btn:hover {
+  background: linear-gradient(to right, #f55265, #f77e61);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.nav-btn button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: #5b6377;
+  font-size: 30px;
+  transition: all 0.05s linear;
+}
+.nav-btn button:hover {
+  -webkit-text-fill-color: transparent;
+}
+
+.home {
+  height: 100vh;
+  width: calc(100% - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  padding: 40px 0 20px 0;
+  text-align: center;
+  font-size: 60px;
+  font-family: agency fb;
+  background: linear-gradient(to right, #f55265, #f77e61);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.input {
+  height: 100px;
+  padding-top: 40px;
+}
+
+.in {
+  height: 40px;
+  background: linear-gradient(#3f4553, #3f4553) padding-box, linear-gradient(to top, #f55265, #f77e61) border-box;
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent;
+  color: #f55265;
+  font-size: 25px;
+  font-family: agency fb;
+}
+.link {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 300px;
+  padding-left: 10px;
+}
+.format {
+  width: 80px;
+}
+.format option {
+  background: #242936;
+}
+.btn {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 80px;
+}
+
+.result1 {
+  position: relative;
+  margin-top: 30px;
+  height: 300px;
+  width: 500px;
+  background-color: #514f6428;
+  border: solid 7px #3b40493f;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.result1 iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.result1 span {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translate(0, -50%);
+  font-size: 30px;
+  color: #5c6472be;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.result2 {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 50px;
+  width: 150px;
+  border-top-left-radius: 15px;
+  background: linear-gradient(to right, #f55265, #f77e61);
+}
+.result2 span {
+  position: absolute;
+  top: 15px;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  z-index: 0;
+  color: #ffffff;
+}
+.result2 iframe {
+  position: absolute;
+  z-index: 2;
+  height: 50px;
+  width: 150px;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 6px;
+}
+
+.profile {
+  display: flex;
+  margin-top: 50px;
+  height: 150px;
+  width: 600px;
+
+  & img {
+    height: 150px;
+    width: 150px;
+    border: solid 5px #5b6377;
+    border-radius: 30px;
+  }
+}
+
+.dtl {
+  padding-left: 30px;
+  color: white;
+  display: grid;
+  place-content: center;
+
+  & span {
+    font-size: 30px;
+    font-family: agency fb;
+  }
+
+  & h2 {
+    font-size: 60px;
+    font-family: agency fb;
+  }
+}
+center {
+  width: 100%;
+  padding-top: 40px;
+  & hr {
+    height: 5px;
+    width: 90%;
+    background: #5b6377;
+    border: none;
+  }
+}
+.home p {
+  font-size: 30px;
+  font-family: agency fb;
+  color: white;
+  padding-top: 30px;
+}
+
+.social {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  right: 0;
+  height: 160px;
+  bottom: 100px;
+  width: 40px;
+
+  & button {
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    color: #242936;
+    background: linear-gradient(to right, #f55265, #f77e61);
+
+    &:hover {
+      font-size: 25px;
+    }
+    &:nth-child(1) {
+      border-top-left-radius: 10px;
+    }
+    &:nth-child(4) {
+      border-bottom-left-radius: 10px;
+    }
+  }
+}
