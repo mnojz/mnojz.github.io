@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000027;
+}
+
+.controls {
+  display: flex;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  height: 50px;
+  width: 500px;
+  background: #ffffff2c;
+  border-radius: 13px;
+  padding: 2px;
+}
+hr {
+  margin: 2px 5px;
+  border: solid 2px #fafafa52;
+  border-radius: 2px;
+}
+.palette {
+  display: flex;
+  width: 110px;
+  justify-content: space-around;
+  align-items: center;
+}
+.palette button {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: none;
+  transition: all 0.05s linear;
+}
+.palette button:hover {
+  scale: 1.1;
+}
+#clr1 {
+  background-color: #ff0062;
+}
+#clr2 {
+  background-color: #00ff62;
+}
+#clrc {
+  background-image: linear-gradient(45deg, #ff2600, #ffbb00);
+}
+.pens {
+  width: 130px;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+.pens div{
+  
+}
+.pens div:hover {
+  scale: 1.12;
+  transition: all linear 0.1s;
+}
+.shape-size {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.size {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border: solid 2px white;
+}
+.shapes {
+  height: 20px;
+  width: 25px;
+  border: solid 2px white;
+}
