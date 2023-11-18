@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <script defer src="canvas.js"></script>
+    <title>vectors</title>
+</head>
+<body>
+    <div class="container">    
+    <div class="wrapper">
+        <form>
+            <div class="in A">
+                <h2>Vector A: </h2>
+                <input type="text" id="xa" placeholder="x">
+                <input type="text" id="ya" placeholder="y">
+            </div>
+            <div class="in B">
+                <h2>Vector B: </h2>
+                <input type="text" id="xb" placeholder="x">
+                <input type="text" id="yb" placeholder="y">
+            </div>
+        </form>
+        <button onclick="calc();graph();">calculate</button>
+        <hr>
+        <div class="result">
+            <h3>Resultant: <span id="res">0</span></h3>
+            <h3>Dot product: <span id="dot">0</span></h3>
+            <h3>projection on A: <span id="proA">0</span></h3>
+            <h3>Projection on B: <span id="proB">0</span></h3>
+        </div>
+    </div>
+    <div class="canvas">
+        <canvas id="canvas"></canvas>
+        <div class="indicator">
+            <div>
+                <div class="i1"></div>
+                <span>Vector A</span>
+                <span class="data dva">___________</span>
+            </div>
+            <div>
+                <div class="i2"></div>
+                <span>Vector B</span>
+                <span class="data dvb">___________</span>
+            </div>
+            <div>
+                <div class="i3"></div>
+                <span>Resultant</span>
+                <span class="data dvr">___________</span>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
