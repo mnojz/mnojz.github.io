@@ -43,7 +43,7 @@ body {
 .power {
   position: relative;
   height: 40px;
-  width: 130px;
+  width: 120px;
   margin: 30px 40px;
   border-radius: 20px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -51,60 +51,70 @@ body {
   display: inline-flex;
   align-items: center;
   background-color: #0d0b1f33;
-  border: solid 1px #00ff95;
-  color: #00ff95;
+  border: solid 4px #d3d3d38f;
+  color: #d3d3d38f;
   z-index: 2;
+  &:hover{
+    border: solid 4px #00ff9575;
+    color: #00ff9575;
+    scale: 1.02;
+  }
+  &:active{
+    border: solid 4px #00ff9575;
+    color: #00ff9575;
+    scale: 0.98;
+  }
 }
+
 .ind {
   position: relative;
-  margin: 10px;
-  background-color: #00ff95;
+  margin: 8px;
+  background-color: #00ff9575;
   height: 20px;
   width: 20px;
   border-radius: 50%;
 }
-#freq {
-  position: absolute;
-  appearance: none;
-  bottom: 20px;
-  width: 90%;
-  height: 10px;
-  left: 50%;
-  transform: translate(-50%);
-  overflow: hidden;
-  background: #0d12255b;
-  border-radius: 5px;
-}
-#freq:focus {
-  outline: none;
-}
-#freq::-webkit-slider-thumb {
-  appearance: none;
-  height: 8px;
-  width: 15px;
-  background: #00ff95;
-  border-radius: 5px;
-  cursor: pointer;
-}
+
+#freq,
 #gain {
   position: absolute;
-  appearance: none;
-  bottom: 40px;
-  width: 100px;
   height: 10px;
-  right: 5%;
+  appearance: none;
   overflow: hidden;
   background: #0d12255b;
   border-radius: 5px;
+  &:focus {
+    outline: none;
+  }
+  &::-webkit-slider-thumb {
+    appearance: none;
+    height: 8px;
+    width: 15px;
+    background: #00ff95;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  &:disabled {
+    filter: saturate(0);
+    cursor: not-allowed;
+    &::-webkit-slider-thumb {
+      cursor: not-allowed;
+    }
+  }
 }
-#gain::-webkit-slider-thumb {
-  appearance: none;
-  height: 8px;
-  width: 15px;
-  background: #00ff95;
-  border-radius: 5px;
-  cursor: pointer;
+
+#freq {
+  bottom: 20px;
+  width: 90%;
+  left: 50%;
+  transform: translate(-50%);
 }
+#gain {
+  bottom: 40px;
+  width: 100px;
+  right: 5%;
+}
+
 .display {
   position: absolute;
   right: 5%;
@@ -118,21 +128,14 @@ body {
   top: 160px;
   left: 50%;
   transform: translate(-50%);
-  background-image: url("wave.png");
-  background-repeat: no-repeat;
-  background-size: contain;
   height: 250px;
   width: 90%;
   border-radius: 20px;
   border: solid 3px rgba(255, 255, 255, 0.288);
   overflow: hidden;
 }
-.graph span {
+canvas {
   position: absolute;
-  color: #00ff95;
-  font-size: 40px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  height: 100%;
   width: 100%;
-  text-align: center;
-  bottom: 10px;
 }
