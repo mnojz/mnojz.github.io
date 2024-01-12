@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+}
+.wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #1f2139;
+  overflow: hidden;
+}
+.container {
+  position: absolute;
+  height: 500px;
+  width: 900px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #252442;
+  border-radius: 10px;
+  box-shadow: 20px 20px 50px #00000044;
+  overflow: hidden;
+}
+.navbar {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  background-color: #2b2a4b;
+  box-shadow: 0 0 25px #00000023;
+}
+.logo img {
+  position: absolute;
+  left: 10px;
+  margin: 5px 0;
+  height: 40px;
+  width: auto;
+  filter: brightness(5) hue-rotate(270deg);
+}
+.power {
+  position: relative;
+  height: 40px;
+  width: 120px;
+  margin: 30px 40px;
+  border-radius: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  background-color: #0d0b1f33;
+  border: solid 4px #d3d3d38f;
+  color: #d3d3d38f;
+  z-index: 2;
+  &:hover{
+    border: solid 4px #00ff9575;
+    color: #00ff9575;
+    scale: 1.02;
+  }
+  &:active{
+    border: solid 4px #00ff9575;
+    color: #00ff9575;
+    scale: 0.98;
+  }
+}
+
+.ind {
+  position: relative;
+  margin: 8px;
+  background-color: #00ff9575;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+#freq,
+#gain {
+  position: absolute;
+  height: 10px;
+  appearance: none;
+  overflow: hidden;
+  background: #0d12255b;
+  border-radius: 5px;
+  &:focus {
+    outline: none;
+  }
+  &::-webkit-slider-thumb {
+    appearance: none;
+    height: 8px;
+    width: 15px;
+    background: #00ff95;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  &:disabled {
+    filter: saturate(0);
+    cursor: not-allowed;
+    &::-webkit-slider-thumb {
+      cursor: not-allowed;
+    }
+  }
+}
+
+#freq {
+  bottom: 20px;
+  width: 90%;
+  left: 50%;
+  transform: translate(-50%);
+}
+#gain {
+  bottom: 40px;
+  width: 100px;
+  right: 5%;
+}
+
+.display {
+  position: absolute;
+  right: 5%;
+  top: 70px;
+  color: #00ff95;
+  font-size: 30pt;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.graph {
+  position: absolute;
+  top: 160px;
+  left: 50%;
+  transform: translate(-50%);
+  height: 250px;
+  width: 90%;
+  border-radius: 20px;
+  border: solid 3px rgba(255, 255, 255, 0.288);
+  overflow: hidden;
+}
+canvas {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
