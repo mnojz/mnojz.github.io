@@ -7,7 +7,7 @@ ___
 
 if you wanna see them use given link:
 
-https://manoj-joshi-0.github.io/pageName
+https://manoj-joshi-0.github.io/index.html
 
 use foldername or html document name in place of pageName <br>
 
