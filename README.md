@@ -7,10 +7,10 @@ ___
 
 if you wanna see them use given link:
 
-https://manoj-joshi-0.github.io/index.html
+https://MJ10XD.github.io/index.html
 
 use foldername or html document name in place of pageName <br>
 
 eg. <br>
-https://manoj-joshi-0.github.io/tone  <br>
-https://manoj-joshi-0.github.io/windmillnight.html
+https://MJ10XD.github.io/tone  <br>
+https://MJ10XD.github.io/windmillnight.html
