@@ -135,13 +135,12 @@ header.shadow {
 }
 .btn {
   display: inline-block;
-  background: var(--main-color);
+  background: #808080;
   color: #fff;
   padding: 0.7rem 1.3rem;
   border-radius: 0.5rem;
-}
-.btn:hover {
-  background: var(--hover);
+  pointer-events: none;
+  user-select: none;
 }
 
 .about-container {
@@ -218,16 +217,16 @@ span {
   border-radius: 0.5rem;
 }
 .html-bar {
-  width: 74%;
+  width: 70%;
 }
 .css-bar {
-  width: 53%;
+  width: 50%;
 }
 .js-bar {
-  width: 34%;
+  width: 20%;
 }
-.react-bar {
-  width: 15%;
+.rust-bar {
+  width: 1%;
 }
 .services-content {
   display: grid;
@@ -287,6 +286,7 @@ span {
 }
 .portfolio-img img {
   width: 100%;
+  height: 100%;
   display: block;
   transition: 0.2s;
 }
@@ -326,16 +326,15 @@ form textarea {
 .contact-button {
   width: 160px;
   cursor: pointer;
-  background: var(--main-color);
+  background: #808080;
   color: #fff;
   justify-content: center;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-left: 35%;
+  margin-left: calc(50% - 80px);
+  pointer-events: none;
 }
-.contact-button:hover {
-  background: var(--hover);
-}
+
 .footer {
   display: grid;
   place-items: center;
@@ -343,10 +342,6 @@ form textarea {
   background: var(--bg-color);
   color: var(--text-color);
   filter: contrast(1.1);
-}
-.footer h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1.6rem;
 }
 .footer-social a i {
   color: var(--bg-color);
