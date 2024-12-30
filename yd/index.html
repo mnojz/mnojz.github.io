@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon" />
+    <script src="script.js" defer></script>
+    <title>yt-dl</title>
+  </head>
+  <body>
+    <h1><span>Youtube</span> Downloader</h1>
+    <div class="input-group">
+      <input
+        type="text"
+        id="videoUrl"
+        placeholder="Enter YouTube video URL"
+        autocomplete="off"
+      />
+      <div class="buttonGroup">
+        <button onclick="showFormats()">
+          <span id="formatText">720p</span>
+          <img src="assets/dropDown.svg" id="dropIcon" />
+        </button>
+        <hr />
+        <button onclick="startDownload()">
+          <img src="assets/download.svg" />
+        </button>
+      </div>
+      <div class="formatGroup">
+        <div class="audio">
+          <span>Audio</span>
+          <button onclick="setFormat('mp3')">mp3</button>
+          <button onclick="setFormat('m4a')">m4a</button>
+          <button onclick="setFormat('webm')">webm</button>
+          <button onclick="setFormat('aac')">aac</button>
+          <button onclick="setFormat('flac')">flac</button>
+          <button onclick="setFormat('opus')">opus</button>
+          <button onclick="setFormat('ogg')">ogg</button>
+          <button onclick="setFormat('wav')">wav</button>
+        </div>
+        <div class="video">
+          <span>Video</span>
+          <button onclick="setFormat('360')">mp4 (360p)</button>
+          <button onclick="setFormat('480')">mp4 (480p)</button>
+          <button onclick="setFormat('720')">mp4 (720p)</button>
+          <button onclick="setFormat('1080')">mp4 (1080p)</button>
+          <button onclick="setFormat('1440')">mp4 (2K)</button>
+          <button onclick="setFormat('4k')">webm (4K)</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="progress">
+      <div id="progress-bar"></div>
+      <div id="progress-text"></div>
+    </div>
+  </body>
+</html>
