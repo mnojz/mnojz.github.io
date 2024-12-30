@@ -32,6 +32,7 @@ h1 {
 }
 .input-group {
   position: relative;
+  top: -50px;
   height: 70px;
   width: 800px;
   padding: 10px;
@@ -95,15 +96,83 @@ input {
     background-color: #8d7eff;
   }
 }
-#progress {
-  position: relative;
+.result {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  height: 300px;
   width: 800px;
+  background: #1b1c20;
+  border-radius: 20px;
+  border: solid 2px #28282d;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  display: none;
+}
+.result .thumbnail {
+  height: 260px;
+  width: 300px;
+  margin: 20px;
+  border: solid 2px #28282d;
+  border-radius: 10px;
+  background: #28282d;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.info {
+  height: 260px;
+  width: 420px;
+  margin: 20px 20px 20px 10px;
+  display: flex;
+  flex-direction: column;
+}
+.info .type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c5ce7;
+  border: solid 2px #6c5ce7;
+  border-radius: 20px;
+  height: 40px;
+  font-size: 1rem;
+  font-family: roboto;
+  margin-top: 10px;
+  cursor: default;
+}
+.info .title {
+  height: 65px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-family: roboto;
+  margin: 20px 0 0 10px;
+}
+.info .url {
+  font-size: 1rem;
+  font-family: roboto;
+  margin: 10px 0 0 10px;
+  & span:first-child {
+    color: #6c5ce7;
+    margin-right: 10px;
+  }
+  & span:last-child {
+    color: #ffffff9d;
+  }
+}
+#progress {
+  position: absolute;
+  bottom: 30px;
+  width: 420px;
   height: 70px;
   background-color: #1b1c20;
   border-radius: 20px;
   border: solid 2px #28282d;
   overflow: hidden;
-  display: none;
+  /* display: none; */
 }
 #progress-bar {
   position: absolute;
@@ -112,7 +181,6 @@ input {
   left: 0;
   top: 0;
   background-color: #6c5ce7;
-  border-radius: 18px;
 }
 #progress-text {
   position: absolute;

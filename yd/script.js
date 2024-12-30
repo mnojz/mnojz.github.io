@@ -8,6 +8,11 @@ const formatText = document.getElementById("formatText");
 const progressMain = document.getElementById("progress");
 const progressDiv = document.getElementById("progress-bar");
 const progressText = document.getElementById("progress-text");
+const resultBox = document.querySelector(".result");
+const thumbnail = document.querySelector(".thumbnail");
+const type = document.querySelector(".type");
+const title = document.querySelector(".title");
+const urlText = document.querySelector(".resultUrl");
 
 formatList.style.visibility = "hidden";
 
@@ -43,6 +48,13 @@ function startDownload() {
     .then((data) => {
       if (data.success) {
         const downloadId = data.id;
+        resultBox.style.display = "flex";
+        type.innerHTML = format == parseInt(format) ? format + "p" : format;
+        thumbnail.style.backgroundImage = `url("${decodeURIComponent(
+          data.info.image
+        )}")`;
+        title.innerHTML = data.title;
+        urlText.innerHTML = url;
         trackDownloadProgress(downloadId);
       } else {
         console.log("Error:", data);
@@ -59,6 +71,7 @@ function startDownload() {
 function trackDownloadProgress(downloadId) {
   progressMain.style.display = "block";
   progressDiv.style.width = "0%";
+  progressDiv.innerHTML = "";
   progressText.innerHTML = "";
 
   const interval = setInterval(() => {
