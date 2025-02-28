@@ -4,27 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="colorPicker.css" />
     <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon" />
     <script src="script.js" defer></script>
+    <script src="colorPicker.js" defer></script>
     <title>yt-dl</title>
   </head>
   <body>
     <h1><span>Youtube</span> Downloader</h1>
     <div class="input-group">
-      <input
-        type="text"
-        id="videoUrl"
-        placeholder="Enter YouTube video URL"
-        autocomplete="off"
-      />
+      <input type="text" id="videoUrl" placeholder="Enter YouTube video URL" autocomplete="off" />
       <div class="buttonGroup">
         <button onclick="showFormats()">
           <span id="formatText">720p</span>
-          <img src="assets/dropDown.svg" id="dropIcon" />
+          <svg id="dropIcon" width="20" height="20" viewBox="0 0 20 20" style="fill: currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M6 0C2.68628 0 0 2.68629 0 6V14C0 17.3137 2.68628 20 6 20H14C17.3137 20 20 17.3137 20 14V6C20 2.68629 17.3137 0 14 0H6ZM4.86453 9.76143C4.38708 9.28398 4.38708 8.50989 4.86453 8.03242C5.34198 7.55498 6.11609 7.55498 6.59354 8.03242L10.0515 11.4904L13.5095 8.03244C13.9869 7.55499 14.761 7.55499 15.2385 8.03244C15.7159 8.50989 15.7159 9.284 15.2385 9.76144L10.9235 14.0764L10.916 14.0839C10.7118 14.2882 10.4533 14.405 10.187 14.4346C9.83063 14.4741 9.46021 14.3572 9.18698 14.084L9.17871 14.0756L4.86453 9.76143Z"
+              style="fill: currentColor"
+            />
+          </svg>
         </button>
         <hr />
         <button onclick="startDownload()">
-          <img src="assets/download.svg" />
+          <svg width="27" height="25" viewBox="0 0 27 25" style="fill: currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M6.75 24.3C4.95979 24.3 3.2429 23.5888 1.97703 22.323C0.711159 21.0571 0 19.3402 0 17.55V13.5C0 13.142 0.142232 12.7986 0.395406 12.5454C0.64858 12.2922 0.991958 12.15 1.35 12.15C1.70804 12.15 2.05142 12.2922 2.30459 12.5454C2.55777 12.7986 2.7 13.142 2.7 13.5V17.55C2.7 18.6241 3.1267 19.6543 3.88622 20.4138C4.64574 21.1733 5.67587 21.6 6.75 21.6H20.25C21.3241 21.6 22.3543 21.1733 23.1138 20.4138C23.8733 19.6543 24.3 18.6241 24.3 17.55V13.5C24.3 13.142 24.4422 12.7986 24.6954 12.5454C24.9486 12.2922 25.292 12.15 25.65 12.15C26.008 12.15 26.3514 12.2922 26.6046 12.5454C26.8578 12.7986 27 13.142 27 13.5V17.55C27 19.3402 26.2888 21.0571 25.023 22.323C23.7571 23.5888 22.0402 24.3 20.25 24.3H6.75Z"
+              style="fill: currentColor"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M21.2153 9.315C21.3394 9.44179 21.4373 9.59181 21.5034 9.75646C21.5695 9.92112 21.6024 10.0972 21.6004 10.2746C21.5984 10.452 21.5615 10.6273 21.4917 10.7904C21.4219 10.9535 21.3206 11.1013 21.1937 11.2252L15.1187 17.1653C14.8664 17.4118 14.5277 17.5498 14.175 17.5498C13.8223 17.5498 13.4836 17.4118 13.2314 17.1653L7.15636 11.2252C7.02688 11.102 6.92318 10.9542 6.85127 10.7905C6.77937 10.6268 6.74069 10.4505 6.73749 10.2717C6.73429 10.093 6.76662 9.91536 6.83262 9.74921C6.89862 9.58305 6.99696 9.43166 7.12194 9.30382C7.24692 9.17598 7.39605 9.07424 7.56067 9.0045C7.72529 8.93476 7.90212 8.89841 8.0809 8.89757C8.25968 8.89672 8.43685 8.9314 8.60212 8.99958C8.7674 9.06776 8.91748 9.16809 9.04366 9.29475L12.825 12.9924V1.35C12.825 0.991958 12.9672 0.64858 13.2204 0.395406C13.4736 0.142232 13.817 0 14.175 0C14.5331 0 14.8764 0.142232 15.1296 0.395406C15.3828 0.64858 15.525 0.991958 15.525 1.35V12.9924L19.305 9.29475C19.4318 9.17064 19.5818 9.07274 19.7465 9.00665C19.9111 8.94056 20.0872 8.90757 20.2646 8.90958C20.442 8.91158 20.6173 8.94854 20.7804 9.01834C20.9435 9.08814 21.0913 9.1894 21.2153 9.31635V9.315Z"
+              style="fill: currentColor"
+            />
+          </svg>
         </button>
       </div>
       <div class="formatGroup">
@@ -53,16 +70,11 @@
       <div class="result">
         <div class="thumbnail"></div>
         <div class="info">
-          <div class="type">mp4 (1080p)</div>
-          <div class="title">
-            this is a title of videothis is a title of videothis is a title of
-            videothis is a title of videothis is a title of video
-          </div>
+          <div class="type">type</div>
+          <div class="title">title</div>
           <div class="url">
             <span>URL:</span>
-            <span class="resultUrl"
-              >http://youtube.com/watch/v?=dfajhsdflkja</span
-            >
+            <span class="resultUrl">http://youtube.com/watch/v?=videoid</span>
           </div>
           <div id="progress">
             <div id="progress-bar"></div>
@@ -70,6 +82,16 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="color-button" onclick="togglePickerVisibility()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: currentColor">
+        <path
+          d="m4 15.76-1 4A1 1 0 0 0 3.75 21a1 1 0 0 0 .49 0l4-1a1 1 0 0 0 .47-.26L17 11.41l1.29 1.3 1.42-1.42-1.3-1.29L21 7.41a2 2 0 0 0 0-2.82L19.41 3a2 2 0 0 0-2.82 0L14 5.59l-1.3-1.3-1.42 1.42L12.58 7l-8.29 8.29a1 1 0 0 0-.29.47zm1.87.75L14 8.42 15.58 10l-8.09 8.1-2.12.53z"
+        ></path>
+      </svg>
+    </div>
+    <div class="color-picker">
+      <canvas id="colorWheel"></canvas>
     </div>
   </body>
 </html>
