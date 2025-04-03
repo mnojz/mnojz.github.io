@@ -2,38 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frequency</title>
+    <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon" />
     <script src="https://cdn.jsdelivr.net/gh/foobar404/wave.js/dist/bundle.js"></script>
     <script src="tone.js" defer></script>
     <script src="canvas.js" defer></script>
     <link rel="stylesheet" href="style.css" />
+    <title>waveCrafter</title>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="container">
-        <div class="navbar">
-          <div class="logo">
-            <img
-              src="https://www.pngall.com/wp-content/uploads/9/Frequency.png"
-              alt="logo"
-            />
-          </div>
-        </div>
-        <button class="power" id="pwr">
-          <div class="ind"></div>
-          POWER
-        </button>
-        <span class="display">0Hz</span>
-
-        <div class="graph" id="graph">
-            <canvas id="canvas"></canvas>
-        </div>
-
-        <input type="range" min="0" max="100" value="0" id="gain" disabled />
-        <input type="range" min="0" max="16000" value="0" id="freq" disabled />
+    <div class="container">
+      <div class="logo">
+        <img src="assets/logo.svg" alt="logo" />
+        <span>WaveCrafter</span>
       </div>
-    </div>    
+      <div class="power">
+        <input type="checkbox" id="pwr" />
+      </div>
+      <div class="visualizer">
+        <canvas id="canvas"></canvas>
+      </div>
+      <div class="controls">
+        <div class="manual">
+          <button class="freq-btn backward" onclick="decreaseFrequency()" disabled>
+            <img src="assets/forward.svg" alt="decrease frequency" />
+          </button>
+          <input type="number" id="freq-entry" value="0" placeholder="freq" disabled />
+          <span>Hz</span>
+          <button class="freq-btn forward" onclick="increaseFrequency()" disabled>
+            <img src="assets/forward.svg" alt="increase frequency" />
+          </button>
+        </div>
+        <div class="slider">
+          <input type="range" id="freq-slider" min="0" max="20000" value="0" disabled />
+        </div>
+      </div>
+    </div>
   </body>
 </html>
